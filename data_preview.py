@@ -65,7 +65,5 @@ def main():
     df = get_df(file)
     st.subheader('Map of the data')
     explore(df)
-    
-    st.line_chart(df)
 
 main()
