@@ -74,8 +74,8 @@ def main():
     #plt.ylabel('Number of Incidences',fontsize='100')
     #plt.title('Number of Cancer Inccidences Per State',fontsize='100')
     #st.write(xy)
-    st.line_chart(df)
-    st.area_chart(df)
+    st.line_chart(df, rotation='horizontal)
+    st.area_chart(df, rotation='horizontal)
     st.map(df)
     st.bar_chart(df)
     
