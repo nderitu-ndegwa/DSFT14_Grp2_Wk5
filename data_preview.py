@@ -4,6 +4,7 @@ from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 
 import time 
+import plotly as plt
 
 st.set_page_config(layout="wide")
 
@@ -65,5 +66,13 @@ def main():
     df = get_df(file)
     st.subheader('Map of the data')
     explore(df)
-
+    
+    plt.rcParams["figure.figsize"] = (100, 50)
+    xy = incidence_rate_state[['State','All cancer types combined / Both sexes combined']]
+    #xy.plot.bar(x = 'State',fontsize='100')
+    plt.xlabel('State',fontsize='100')
+    plt.ylabel('Number of Incidences',fontsize='100')
+    plt.title('Number of Cancer Inccidences Per State',fontsize='100')
+    st.bar_chart(xy)
+    
 main()
