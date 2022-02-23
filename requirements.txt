@@ -4,3 +4,4 @@ pandas-profiling == 3.0.0
 streamlit-pandas-profiling == 0.1.2
 openpyxl == 3.0.7
 scikit-learn == 0.24.2
+plotly
