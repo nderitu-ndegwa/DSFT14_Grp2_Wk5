@@ -67,12 +67,13 @@ def main():
     st.subheader('Map of the data')
     explore(df)
     
-    #plt.rcParams["figure.figsize"] = (100, 50)
-    #xy = incidence_rate_state[['State','All cancer types combined / Both sexes combined']]
-    #xy.plot.bar(x = 'State',fontsize='100')
-    #plt.xlabel('State',fontsize='100')
-    #plt.ylabel('Number of Incidences',fontsize='100')
-    #plt.title('Number of Cancer Inccidences Per State',fontsize='100')
+    plt.rcParams["figure.figsize"] = (100, 50)
+    xy = df[['State','All cancer types combined / Both sexes combined']]
+    xy.plot.bar(x = 'State',fontsize='100')
+    plt.xlabel('State',fontsize='100')
+    plt.ylabel('Number of Incidences',fontsize='100')
+    plt.title('Number of Cancer Inccidences Per State',fontsize='100')
+    st.write(xy)
     st.bar_chart(df)
     
 main()
