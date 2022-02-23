@@ -4,7 +4,7 @@ from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 
 import time 
-import plotly as plt
+import plotly
 
 st.set_page_config(layout="wide")
 
